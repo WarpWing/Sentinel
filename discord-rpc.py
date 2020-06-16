@@ -1,17 +1,17 @@
 import rpc
 import time
 
-print("Demo for python-discord-rpc")
+print("Discord Rich Presence MOD by WarpWing")
 client_id = '714648715159404615' #Your application's client ID as a string. (This isn't a real client ID)
 rpc_obj = rpc.DiscordIpcClient.for_platform(client_id) #Send the client ID to the rpc module
-print("RPC connection successful.")
+print("RPC connection online")
 
 time.sleep(5)
 start_time = time.time()
 while True:
     activity = {
             "state": "Sentinel(SSH)",
-            "details": "Working on Docker Containers",
+            "details": "Doing some System Administration",
             "timestamps": {
                 "start": start_time
             },
