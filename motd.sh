@@ -2,5 +2,5 @@ echo Good Morning $USER | lolcat
 
 neofetch | lolcat
 
-curl -L covid19.trackercli.com | lolcat 
- # Please note that in the future, curl needs to have % Total hidden for visual purposes
+wget -nv https://covid19.trackercli.com && cat index.html | lolcat
+ # wget alternative found. still shows some verbose but it's a workaround compared to curl output
