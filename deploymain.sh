@@ -4,9 +4,9 @@ sleep 2s
 figlet Sentinel Server | lolcat
 sleep 1s
 echo -n "Would you like to start deploying Sentinel Server Files?: "
-read INPUT
+read DEPLOYINPUT
 
-if [ $INPUT = y ]
+if [ $DEPLOYINPUT = y ]
 then
   echo "Starting installation and deployment of Sentinel Files"
   sleep 2s
@@ -16,8 +16,8 @@ else
   exit
 fi
 echo -n "Would you like to install Homebrew?: "
-read INPUT 
-  if [ $INPUT = y ] 
+read BREWINPUT 
+  if [ $BREWINPUT = y ] 
    then 
        echo "Installing Homebrew" 
        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
@@ -26,4 +26,19 @@ read INPUT
    else 
         echo "Continuing with Installation"
         sleep 2s
+fi 
+echo -n "Would you like the CUSTOM MOTD included?:"
+read MOTDINPUT
+    if [ $MOTDINPUT = y ] 
+     then 
+      echo "Fetching MOTD from Github"
+      wget -q https://raw.githubusercontent.com/WarpWing/Sentinel/master/motd.sh 
+      sleep 2s 
+      chmod a+x motd.sh
+      chmod -x /etc/update-motd.d/* 
+      mv motd.sh  /etc/update-motd.d/
+      echo "MOTD has been installed and automatically moved to the proper directory"
+    else 
+    echo "Continuing with Installation"
+    sleep 2s
 fi 
