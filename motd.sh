@@ -8,3 +8,4 @@ sleep 10s
 
 rm index.html 
  # Still doesnt work but I can work with it. Lolcat pipe coming soon
+figlet WELCOME BACK $USER | lolcat 
