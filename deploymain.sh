@@ -19,6 +19,7 @@ read INPUT
        echo "Installing Homebrew" 
        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
        sleep 3s
+       echo "Homebrew has been installed! Continuing with Deployment"
    else 
         echo "Continuing with Installation"
 fi 
