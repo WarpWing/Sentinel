@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Please note that this script is aimed for Ubuntu 20.04 LTS and up "
+echo "Please note that this script is aimed for Ubuntu 20.04 Server LTS and up "
 sleep 2s
 figlet Sentinel Server | lolcat
 sleep 1s
