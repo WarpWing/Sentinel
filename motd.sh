@@ -2,7 +2,7 @@ echo Good Morning $USER | lolcat
 
 neofetch | lolcat
 
-wget -q https://covid19.trackercli.com | cat index.html > motd.txt | cat motd.txt | lolcat
+wget -q https://covid19.trackercli.com/history/us | cat index.html > motd.txt | cat motd.txt | lolcat
 
 sleep 10s
 
