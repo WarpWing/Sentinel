@@ -20,5 +20,5 @@ read INPUT
        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
        sleep 3s
    else 
-        echo "Ok, moving on"
+        echo "Continuing with Installation"
 fi 
