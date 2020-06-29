@@ -22,4 +22,5 @@ read INPUT
        echo "Homebrew has been installed! Continuing with Deployment"
    else 
         echo "Continuing with Installation"
+        sleep 2s
 fi 
