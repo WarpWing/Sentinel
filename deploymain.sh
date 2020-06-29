@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo "Please note that this script is aimed for Ubuntu 20.04 LTS and up "
+sleep 2s 
 echo -n "Would you like to start deploying Sentinel Server Files?: "
 read INPUT
 
@@ -16,7 +17,8 @@ read INPUT
   if [ $INPUT = y ] 
    then 
        echo "Installing Homebrew" 
-       sleep 2s
+       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
+       sleep 3s
    else 
         echo "Ok, moving on"
 fi 
