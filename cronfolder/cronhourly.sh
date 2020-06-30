@@ -1,1 +1,1 @@
-*/15 * * * * sudo apt-get update 
+0 * * * * sudo apt-get update 
