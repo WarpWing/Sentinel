@@ -1,0 +1,1 @@
+*/15 * * * * sudo apt-get update 
