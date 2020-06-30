@@ -3,6 +3,19 @@ echo "Please note that this script is aimed for Ubuntu 20.04 Server LTS and up "
 sleep 2s
 figlet Sentinel Server | lolcat
 sleep 1s
+echo -n " Would you like to run this in Quick Mode or Verbose Mode"
+echo -n "Verbose Mode requires you to choose what is or isn't going to be installed"
+echo -n "Quick Mode is Automatic and will choose everything to be installed by default"
+sleep 1s
+read DECIDEINPUT
+if [ $DEPLOYINPUT = y ]
+then
+  echo "Starting QuickMode Installation"
+  sleep 2s
+else
+  echo "Starting VerboseMode Installation"
+  sleep 2s
+fi
 echo -n "Would you like to start deploying Sentinel Server Files?: "
 read DEPLOYINPUT
 
