@@ -1,3 +1,5 @@
+figlet Sentinel Server | lolcat
+sleep 3s
 echo -n "Would you like to start deploying Sentinel Server Files?: "
 read DEPLOYINPUT
 if [ $DEPLOYINPUT = y ]
