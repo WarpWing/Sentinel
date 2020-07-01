@@ -22,14 +22,10 @@ read MODEINPUT
 if [ $MODEINPUT = 1 ] 
 then 
  echo "Switching to QuickMode installation" | lolcat
- sleep 1s
- wget -q https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelquickmode.sh 
- chmod a+x sentinelquickmode.sh
- #Put Quickmode script cat here
+ sleep 2s
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelquickmode.sh)" && chmod 777 sentinelquickmode.sh
 else 
  echo "Switching to VerboseMode installation" | lolcat
- sleep 1s
- wget -q https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelverbosemode.sh 
- chmod a+x sentinelverbosemode.sh 
- #Put Verbosemode script cat here
+ sleep 2s
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelverbosemode.sh)" && chmod 777 sentinelverbosemode.sh
  fi 
