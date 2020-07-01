@@ -1,57 +1,31 @@
-#!/bin/bash
-echo "Please note that this script is aimed for Ubuntu 20.04 Server LTS and up "
-sleep 2s
 figlet Sentinel Server | lolcat
-sleep 1s
-echo -n " Would you like to run this in Quick Mode or Verbose Mode"
-echo -n "Verbose Mode requires you to choose what is or isn't going to be installed"
-echo -n "Quick Mode is Automatic and will choose everything to be installed by default"
-sleep 1s
-read DECIDEINPUT
-if [ $DEPLOYINPUT = y ]
-then
-  echo "Starting QuickMode Installation"
-  sleep 2s
-else
-  echo "Starting VerboseMode Installation"
-  sleep 2s
-fi
-echo -n "Would you like to start deploying Sentinel Server Files?: "
+sleep 3s
+echo -n "Would you like to start deploying Sentinel Server Files?: " |lolcat
 read DEPLOYINPUT
-
 if [ $DEPLOYINPUT = y ]
 then
-  echo "Starting installation and deployment of Sentinel Files"
+  echo "Starting installation and deployment of Sentinel Files" | lolcat
   sleep 2s
 else  
-  echo "Terminating...."
+  echo "Terminating...." | lolcat
   sleep 2s
   exit
 fi
-echo -n "Would you like to install Homebrew?: "
-read BREWINPUT 
-  if [ $BREWINPUT = y ] 
-   then 
-       echo "Installing Homebrew" 
-       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
-       sleep 3s
-       echo "Homebrew has been installed! Continuing with Deployment"
-   else 
-        echo "Continuing with Installation"
-        sleep 2s
-fi 
-echo -n "Would you like the CUSTOM MOTD included?:"
-read MOTDINPUT
-    if [ $MOTDINPUT = y ] 
-     then 
-      echo "Fetching MOTD from Github"
-      wget -q https://raw.githubusercontent.com/WarpWing/Sentinel/master/motd.sh 
-      sleep 2s 
-      chmod a+x motd.sh
-      chmod -x /etc/update-motd.d/* 
-      mv motd.sh  /etc/update-motd.d/
-      echo "MOTD has been installed and automatically moved to the proper directory"
-    else 
-    echo "Continuing with Installation"
-    sleep 2s
-fi 
+echo "Would you like to run this in QuickMode or VerboseMode?" | lolcat
+sleep 1s 
+echo  "1. QuickMode (Automatic)" | lolcat
+sleep 1s
+echo  "2. VerboseMode (Manuel)" | lolcat
+sleep 1s
+echo -n "Please choose a method of installaton by Number:" | lolcat
+read MODEINPUT
+if [ $MODEINPUT = 1 ] 
+then 
+ echo "Switching to QuickMode installation" | lolcat
+ sleep 3s
+ #Put Quickmode script cat here
+else 
+ echo "Switching to VerboseMode installation" | lolcat
+ sleep 3s 
+ #Put Verbosemode script cat here
+ fi 
