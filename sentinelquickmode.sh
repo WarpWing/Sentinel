@@ -12,6 +12,7 @@ if [ $CONFIRMINPUT = y ]
      echo "Doing Final Checks on Installation" | lolcat
      sleep 2s 
      #Smush all the commands here :) 
+     exit
     else 
   echo "Terminating QuickMode Install" | lolcat
   sleep 2s 
