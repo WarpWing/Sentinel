@@ -1,3 +1,5 @@
+reset
+sleep 1s
 figlet Sentinel VerboseMode | lolcat
 sleep 2s
 echo "Strapping in for a precise install of Sentinel" | lolcat

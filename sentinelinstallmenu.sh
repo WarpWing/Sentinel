@@ -1,5 +1,7 @@
 # A simple menu system
 #sudo apt-get install wget neofetch lolcat curl figlet -y 
+reset
+sleep 1s
 figlet Sentinel Server | lolcat
 sleep 3s
 echo "Please respond with Y or N in most questions"

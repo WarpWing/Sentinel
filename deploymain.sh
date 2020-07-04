@@ -1,3 +1,5 @@
+reset
+sleep 1s
 figlet Sentinel Server | lolcat
 sleep 3s
 echo -n "Would you like to start deploying Sentinel Server Files?: " |lolcat
