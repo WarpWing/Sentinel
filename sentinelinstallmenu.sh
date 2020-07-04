@@ -4,12 +4,12 @@ reset
 sleep 1s
 figlet Sentinel Server Installer | lolcat
 sleep 3s
-echo "Please respond with Y or N in most questions"
+echo "Please respond with Y or N in most questions" | lolcat
 sleep 2s
 
-PS3="Select the installation method: "
+PS3="Select the installation method: " 
 
-select opt in Quick Verbose Quit; do
+select opt in Quick Verbose Quit; do 
 
   case $opt in
     Quick)
