@@ -2,7 +2,7 @@
 #sudo apt-get install wget neofetch lolcat curl figlet -y 
 reset
 sleep 1s
-figlet Sentinel Server | lolcat
+figlet Sentinel Server Installer | lolcat
 sleep 3s
 echo "Please respond with Y or N in most questions"
 sleep 2s
