@@ -1,3 +1,5 @@
+reset
+sleep 1s
 figlet Sentinel Server | lolcat
 sleep 3s
 echo -n "Would you like to start deploying Sentinel Server Files?: " |lolcat
@@ -22,10 +24,10 @@ read MODEINPUT
 if [ $MODEINPUT = 1 ] 
 then 
  echo "Switching to QuickMode installation" | lolcat
- sleep 3s
- #Put Quickmode script cat here
+ sleep 2s
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelquickmode.sh)" && chmod 777 sentinelquickmode.sh
 else 
  echo "Switching to VerboseMode installation" | lolcat
- sleep 3s 
- #Put Verbosemode script cat here
+ sleep 2s
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelverbosemode.sh)" && chmod 777 sentinelverbosemode.sh
  fi 
