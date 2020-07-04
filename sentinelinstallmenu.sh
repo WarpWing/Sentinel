@@ -1,36 +1,31 @@
-#Put Beta Install Menu Stuff here
-#!/bin/bash
 # A simple menu system
+#sudo apt-get install wget neofetch lolcat curl figlet -y 
+figlet Sentinel Server | lolcat
+sleep 3s
+echo "Please respond with Y or N in most questions"
+sleep 2s
+
 PS3="Select the installation method: "
 
-select opt in Quick verbose quit; do
+select opt in Quick Verbose Quit; do
 
   case $opt in
     Quick)
-      read -p "Enter the first number: " n1
-      read -p "Enter the second number: " n2
-      echo "$n1 + $n2 = $(($n1+$n2))"
+      echo "Switching to QuickMode installation" | lolcat
+      sleep 2s
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelquickmode.sh)" && chmod 777 sentinelquickmode.sh
       ;;
-    verbose)
-      read -p "Enter the first number: " n1
-      read -p "Enter the second number: " n2
-      echo "$n1 - $n2 = $(($n1-$n2))"
+    Verbose)
+      echo "Switching to VerboseMode installation" | lolcat
+      sleep 2s
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/sentinelverbosemode.sh)" && chmod 777 sentinelverbosemode.sh
       ;;
-    multiply)
-      read -p "Enter the first number: " n1
-      read -p "Enter the second number: " n2
-      echo "$n1 * $n2 = $(($n1*$n2))"
-      ;;
-    divide)
-      read -p "Enter the first number: " n1
-      read -p "Enter the second number: " n2
-      echo "$n1 / $n2 = $(($n1/$n2))"
-      ;;
-    quit)
+    Quit)
       break
       ;;
     *) 
-      echo "Invalid option $REPLY"
+      echo "Invalid response $REPLY"
+      echo "Please try a valid option :)"
       ;;
   esac
 done
