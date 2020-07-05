@@ -1,5 +1,5 @@
 # A simple menu system
-#sudo apt-get install wget neofetch lolcat curl figlet -y 
+#sudo apt-get install wget neofetch lolcat curl figlet bashtop -y 
 reset
 sleep 1s
 figlet Sentinel Server Installer | lolcat
