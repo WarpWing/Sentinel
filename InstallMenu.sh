@@ -1,34 +1,30 @@
 #!/bin/bash
 
-###############################################################################
-# Menu                                                                        #
-###############################################################################
-#This was adapted from a example menu
 while :
 do
     clear
     cat<<EOF
     ###############################################################################
-    # Sentinel Server Installer                                                   #
+    # Sentinel Server Tool                                                        #
     # Version : 0.1                                                               #
     ###############################################################################
     #                                                                             #
     #  Please enter your choice:                                                  #
     #                                                                             #
-    #  (1) Install Sentinel                                                       #
-    #  (2) Install Applications                                                   #
+    #  (1) Install Sentinel Core                                                  #
+    #  (2) Install Tools                                                          #
     #  (3) Run Diagnostics                                                        #
-    #  (4) Update                                                                 #
+    #  (4) Update Sentinel Core                                                   #
     #  (0) Exit                                                                   #
     #                                                                             #
     ###############################################################################
 EOF
     read -n1 -s
     case "$REPLY" in
-    "1")  echo "Ready to install Homebrew..."            | $BIN/setup.sh         ;;
-    "2")  echo "Ready to install macOS..."               | $BIN/install.sh       ;;
-    "3")  echo "Ready to configure macOS"                | $BIN/config.sh        ;;
-    "4")  echo "Ready to update..."                      | $BIN/update.sh        ;;
+    "1")  echo "Ready to install Sentinel Core"          | Sentinel/setup.sh         ;;
+    "2")  echo "Ready to install Sentinel Toolkit"       | Sentinel/install.sh       ;;
+    "3")  echo "Running Diagnostics"                     | Sentinel/config.sh        ;;
+    "4")  echo "Ready to update..."                      | Sentinel/update.sh        ;;
     "0")  exit                                                                   ;;
      * )  echo "Invalid option!"                                                 ;;
     esac
