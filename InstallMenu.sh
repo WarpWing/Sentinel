@@ -21,7 +21,7 @@ do
 EOF
     read -n1 -s
     case "$REPLY" in
-    "1")  echo "Ready to install Sentinel Core"          | Sentinel/setup.sh         ;;
+    "1")  echo "Ready to install Sentinel Core"          | Sentinel/Callfolder/qm.sh         ;;
     "2")  echo "Ready to install Sentinel Toolkit"       | Sentinel/install.sh       ;;
     "3")  echo "Running Diagnostics"                     | Sentinel/config.sh        ;;
     "4")  echo "Ready to update..."                      | Sentinel/update.sh        ;;
