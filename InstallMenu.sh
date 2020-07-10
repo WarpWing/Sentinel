@@ -25,7 +25,7 @@ EOF
     "2")  echo "Ready to install Sentinel Toolkit"       | Sentinel/install.sh       ;;
     "3")  echo "Running Diagnostics"                     | Sentinel/config.sh        ;;
     "4")  echo "Ready to update..."                      | Sentinel/update.sh        ;;
-    "0")  exit                                                                   ;;
+    "0")  exit | reset                                                                 ;;
      * )  echo "Invalid option!"                                                 ;;
     esac
     sleep 1
