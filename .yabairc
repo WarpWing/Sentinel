@@ -36,12 +36,13 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  48
-yabai -m config bottom_padding               20
-yabai -m config left_padding                 20
-yabai -m config right_padding                20
-yabai -m config window_gap                   10
-
+yabai -m config top_padding                  12
+yabai -m config bottom_padding               12
+yabai -m config left_padding                 12
+yabai -m config right_padding                12
+yabai -m config window_gap                   06
+yabai -m config external_bar all:20:20 
+#From Jean
 yabai -m signal --add event=space_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
 yabai -m signal --add event=display_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
 yabai -m signal --add event=space_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
@@ -60,4 +61,4 @@ yabai -m rule --add label="Transmission" app="^Transmission$" manage=off
 yabai -m rule --add label="Colorpicker" app="^Colorpicker$" manage=off
 yabai -m rule --add label="iTerm2" app="^iTerm2$" manage=off
 
-echo "yabai configuration loaded.."
+echo "Yabai configuration loaded.."
