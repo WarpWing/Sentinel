@@ -28,5 +28,4 @@ EOF
     "0")  reset && exit                                                               ;;
      * )  echo "Invalid choice!" && sleep 1s && reset                                               ;;
     esac
-    sleep 1
 done
