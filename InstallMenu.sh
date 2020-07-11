@@ -26,7 +26,7 @@ EOF
     "3")  echo "Running Diagnostics"                     | Callfolder/diagnose.sh        ;;
     "4")  echo "Ready to update..."                      | Callfolder/update.sh        ;;
     "0")  reset && exit                                                               ;;
-     * )  echo "Invalid option!" && sleep 1s && reset                                               ;;
+     * )  echo "Invalid choice!" && sleep 1s && reset                                               ;;
     esac
     sleep 1
 done
