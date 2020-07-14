@@ -16,7 +16,7 @@ read BREWINPUT
         echo "Continuing with Installation" | lolcat
         sleep 2s
 fi 
-echo -n "Would you like the CUSTOM MOTD included?:" | lolcat
+echo -n "Would you like the CUSTOM MOTD included?: " | lolcat
 read MOTDINPUT
     if [ $MOTDINPUT = y ] 
      then 
