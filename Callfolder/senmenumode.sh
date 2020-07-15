@@ -1,4 +1,5 @@
 #!/bin/bash
+reset
 sleep 2s
 while :
 do
@@ -12,8 +13,8 @@ do
     #  3. Quit: This quits the menu                                               #
     ###############################################################################
 EOF
-
-echo -n "Please choose a option: "
+sleep 2s
+    echo -n "Please choose a option: "
 read NUMBER 
 
 echo -n "You have chosen $NUMBER as a option!"
@@ -27,9 +28,12 @@ case $NUMBER in
     ./vm.sh
     ;; 
     3)
-
+    sleep 1s
+    reset && exit
+    ;;
     *)
     echo -n "$NUMBER is not a option! Please try again"
+    ;;
 
 esac 
 done 
