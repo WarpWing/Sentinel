@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 2s
 while :
 do
     clear
