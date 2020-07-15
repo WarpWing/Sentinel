@@ -20,11 +20,9 @@ sleep 1s
 case $NUMBER in 
 
     1)
-    echo "Quickmode"
     ./qm.sh
      ;; 
     2)
-    echo "Verbosemode"
     ./vm.sh
     ;; 
     *)
