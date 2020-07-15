@@ -8,7 +8,8 @@ do
     #    Please select a mode to install Sentinel:                                #
     #                                                                             #
     #  1. Quickmode: This automatically installs everything                       #
-    #  2. Verbosemode: This lets you pick what you want and dont want to install  #                                                                      
+    #  2. Verbosemode: This lets you pick what you want and dont want to install  #
+    #  3. Quit: This quits the menu                                               #
     ###############################################################################
 EOF
 
@@ -25,6 +26,8 @@ case $NUMBER in
     2)
     ./vm.sh
     ;; 
+    3)
+
     *)
     echo -n "$NUMBER is not a option! Please try again"
 
