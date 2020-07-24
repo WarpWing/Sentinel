@@ -6,11 +6,10 @@ do
     clear
     cat<<EOF
     ###############################################################################
-    #  Please select a mode to install Sentinel:                                  #
+    #  Sentinel Install Menu                                                      #
     #                                                                             #
-    #  1. Quickmode: This automatically installs everything                       #
-    #  2. Verbosemode: This lets you pick what you want and dont want to install  #
-    #  3. Quit: This quits the menu                                               #
+    #  1. Start Installation                                                      # 
+    #  2. Quit Installation                                                       #
     #                                                                             #
     ###############################################################################
 EOF
@@ -26,9 +25,6 @@ case $NUMBER in
     ./qm.sh
      ;; 
     2)
-    ./vm.sh
-    ;; 
-    3)
     sleep 1s
     reset && exit
     ;;
