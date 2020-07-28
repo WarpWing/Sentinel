@@ -12,7 +12,7 @@ do
     #  Please enter your choice:                                                  #
     #                                                                             #
     #  (1) Install Sentinel Core                                                  #
-    #  (2) Install Tools                                                          #
+    #  (2) Install Toolkit                                                        #
     #  (3) Run Diagnostics                                                        #
     #  (4) Update Sentinel Core                                                   #
     #  (0) Exit                                                                   #
