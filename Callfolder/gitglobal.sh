@@ -1,2 +1,3 @@
-# This is a WIP Script that would disperse any scripts to multiple target repositories	
+# This is a WIP Script that would disperse any unsaved commits in all github repos to push
+	
 
