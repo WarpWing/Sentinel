@@ -16,7 +16,6 @@ if [ $CONFIRMINPUT = y ]
      exit
     else 
   echo "Terminating QuickMode Install" | lolcat
-  sleep 2s 
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/WarpWing/Sentinel/master/Callfolder/InstallMenu.sh)"
-  sleep 2s
+  sleep 1s
+  reset
   fi 
