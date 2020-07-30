@@ -24,7 +24,7 @@ EOF
     "1")  echo "Ready to install Sentinel Core"          | Callfolder/qm.sh         ;;
     "2")  echo "Ready to install Sentinel Toolkit"       | Callfolder/toolkitinstall.sh       ;;
     "3")  echo "Running Diagnostics"                     | Callfolder/diagnose.sh        ;;
-    "4")  echo "Ready to update..."                      | Callfolder/update.sh        ;;
+    "4")  echo "Ready to update...."                      | Callfolder/update.sh        ;;
     "0")  reset && exit                                                               ;;
      * )  echo "Invalid choice!" && sleep 1s && reset                                               ;;
     esac
