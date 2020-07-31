@@ -1,4 +1,4 @@
-#import rpc
+import rpc
 import time
 
 print("Discord Rich Presence MOD by WarpWing")
