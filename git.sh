@@ -3,4 +3,3 @@ read INPUT
 git add .
 git commit -m "$INPUT"
 git push -u   
-# -F Flag removed
