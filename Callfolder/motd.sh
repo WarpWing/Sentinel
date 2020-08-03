@@ -1,3 +1,3 @@
-neofetch | lolcat 
-figlet WELCOME BACK $USER | lolcat  
-#This is the finalized MOTD. Woo
+neofetch
+figlet WELCOME BACK $USER
+ansiweather -l Yonkers,US -u metric
