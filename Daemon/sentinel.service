@@ -4,7 +4,7 @@
 Description=The Sentinel Daemon by Ty Chermsirivatana
 
 [Service]
-ExecStart=/usr/bin/mydaemon
+ExecStart=/usr/bin/sentinel.sh
 Restart=on-failure
 
 [Install]
