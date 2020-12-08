@@ -1,1 +1,0 @@
-0 * * * * sudo apt-get update -y
