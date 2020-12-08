@@ -1,10 +1,10 @@
 # Please install this by moving the .service file to /etc/systemd/system/ 
 # Also please move the Daemon script to /usr/bin/
 [Unit]
-Description=The Sentinel Daemon by Ty Chermsirivatana
+Description=The ArgoCD Keep-Alive Daemon by Ty Chermsirivatana
 
 [Service]
-ExecStart=/usr/bin/sentinel.sh
+ExecStart=/usr/bin/argocd-ka.sh
 Restart=on-failure
 
 [Install]
