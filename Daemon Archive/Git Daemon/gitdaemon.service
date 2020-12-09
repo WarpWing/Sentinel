@@ -1,0 +1,11 @@
+# Please install this by moving the .service file to /etc/systemd/system/ 
+# Also please move the Daemon script to /usr/bin/
+[Unit]
+Description=Git Daemon by Ty Chermsirivatana
+
+[Service]
+ExecStart=/usr/bin/gitdaemon.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target 
