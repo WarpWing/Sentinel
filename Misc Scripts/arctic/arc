@@ -1,0 +1,41 @@
+#!/bin/bash
+# Use this command to copy Arc to your Linux/MacOS Path: sudo cp arc /usr/bin/arc
+
+# Enviromental Variables 
+CLAST=$(ls -1c | head -1) #CLAST stands for Created Last. It will find the newest modified file and save it as a variable
+ASET="--geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o %(title)s.%(ext)s"
+VSET="--geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o %(title)s.%(ext)s "
+
+while getopts v:a:h: flag
+do
+    case "${flag}" in
+        v|video) youtube-dl $VSET ${OPTARG}
+           chmod 764 $CLAST
+           echo File $CLAST has been download from ${OPTARG}
+           ;;
+        a|audio) youtube-dl $ASET ${OPTARG} 
+           chmod 764 $CLAST
+           echo File $CLAST has been download from ${OPTARG}
+           ;;
+        h|help) echo Arc Help
+           echo Arc or Arctic is a command line tool to download videos from a variety of sources. Accepts all types of links
+           echo Command Line Flags 
+           echo "-h/-help" - Shows this page
+           echo "-a/-audio" - Downloads audio files. Note: It can also accept video links and convert them to audio as well. It can also accept a .txt file of URLs
+           echo "-v/video" - Downloads videos with audio.  It can also accept a .txt file of URLs
+           echo Thank you for using Arc/Arctic by WarpWing to download your media!
+           ;;
+    esac
+done 
+
+# External Help Page Clone 
+echo Arc or Arctic is a command line tool to download videos from a variety of sources. Accepts all types of links
+echo Command Line Flags 
+echo "-h/-help" - Shows this page
+echo "-a/-audio" - Downloads audio files. Note: It can also accept video links and convert them to audio as well. It can also accept a .txt file of URLs
+echo "-v/video" - Downloads videos with audio.  It can also accept a .txt file of URLs
+echo Thank you for using Arc/Arctic by WarpWing to download your media!
+
+
+
+
