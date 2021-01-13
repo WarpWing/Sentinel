@@ -10,11 +10,9 @@ while getopts v:a:h: flag
 do
     case "${flag}" in
         v|video) youtube-dl $VSET ${OPTARG}
-           chmod 764 $CLAST
            echo File $CLAST has been download from ${OPTARG}
            ;;
         a|audio) youtube-dl $ASET ${OPTARG} 
-           chmod 764 $CLAST
            echo File $CLAST has been download from ${OPTARG}
            ;;
         h|help) echo Arc Help
