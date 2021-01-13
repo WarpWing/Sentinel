@@ -4,7 +4,7 @@
 # Enviromental Variables 
 CLAST=$(ls -1c | head -1) #CLAST stands for Created Last. It will find the newest modified file and save it as a variable
 ASET="--embed-thumbnail --geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o %(title)s.%(ext)s"
-VSET="--geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o %(title)s.%(ext)s "
+VSET="--embed-thumbnail --geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o %(title)s.%(ext)s "
 
 while getopts v:a:h: flag
 do
