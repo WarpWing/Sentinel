@@ -21,20 +21,12 @@ do
            echo Arc or Arctic is a command line tool to download videos from a variety of sources. Accepts all types of links
            echo Command Line Flags 
            echo "-h/-help" - Shows this page
-           echo "-a/-audio" - Downloads audio files. Note: It can also accept video links and convert them to audio as well. It can also accept a .txt file of URLs
-           echo "-v/video" - Downloads videos with audio.  It can also accept a .txt file of URLs
+           echo "-a/-audio" - Downloads audio files.
+           echo "-v/video" - Downloads videos with audio. 
            echo Thank you for using Arc/Arctic by WarpWing to download your media!
            ;;
     esac
 done 
-
-# External Help Page Clone 
-echo Arc or Arctic is a command line tool to download videos from a variety of sources. Accepts all types of links
-echo Command Line Flags 
-echo "-h/-help" - Shows this page
-echo "-a/-audio" - Downloads audio files. Note: It can also accept video links and convert them to audio as well. It can also accept a .txt file of URLs
-echo "-v/video" - Downloads videos with audio.  It can also accept a .txt file of URLs
-echo Thank you for using Arc/Arctic by WarpWing to download your media!
 
 
 
