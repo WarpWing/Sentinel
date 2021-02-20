@@ -2,8 +2,8 @@
 # Use this command to copy Arc to your Linux/MacOS Path: sudo cp arc /usr/bin/arc && sudo chmod a+rx arc 
 
 # Enviromental Variables 
-ASET="--console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o %(title)s.%(ext)s" #ASET sets audio option flags
-VSET="--console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o %(title)s.%(ext)s " #VSET sets video option flags 
+ASET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o %(title)s.%(ext)s" #ASET sets audio option flags
+VSET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o %(title)s.%(ext)s " #VSET sets video option flags 
 BSET="--no-overwrites --batch-file" # BSET sets Batch Settings for Batch Downloading 
 
 while getopts v:a:h:b: flag
