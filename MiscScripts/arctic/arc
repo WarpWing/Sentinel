@@ -2,21 +2,23 @@
 # Use this command to copy Arc to your Linux/MacOS Path: sudo cp arc /usr/bin/arc && sudo chmod a+rx arc 
 
 # Enviromental Variables 
-ASET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o %(title)s.%(ext)s" #ASET sets audio option flags
-VSET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o %(title)s.%(ext)s " #VSET sets video option flags 
-BSET="--no-overwrites --batch-file" # BSET sets Batch Settings for Batch Downloading 
+ASET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o '%(title)s.%(ext)s' " #ASET sets audio option flags
+VSET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o '%(title)s.%(ext)s' " #VSET sets video option flags 
+BSET="--batch-file" # BSET sets Batch Settings for Batch Downloading 
 
 while getopts v:a:h:b: flag
 do
     case "${flag}" in
         v|video) youtube-dl $VSET ${OPTARG}
-           echo [ARC]: Your video file has been download from ${OPTARG}
+           echo [ARC] Operation has ended
            ;;
         a|audio) youtube-dl $ASET ${OPTARG} 
-           echo [ARC]: Your audio file has been download from ${OPTARG} 
+           echo [ARC] Operation has ended
            ;;
-        b|batch) $BSET
-           ;;
+        b|batchmedia) $BSET #REMINDER TO REWORK THIS TO DO BM
+           read -p 'Audio or Video?(a/v): ' INPUT
+           read -p 'Filename?(can be relative path or absolute): ' FILEPATH
+           #REMINDER TO WORK ON DIFFERENCE FUNCTION youtube-dl 
         h|help) echo Arc Help
            echo Arc or Arctic is a command line tool to download videos from a variety of sources. Accepts all types of links
            echo Command Line Flags 
