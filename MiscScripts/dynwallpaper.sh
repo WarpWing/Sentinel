@@ -8,7 +8,7 @@ while true; do
     08|09|10|11|12|13|14|15)
     /usr/local/bin/setwallpaper /home/warpwing/code/dynamic-wallpaper/images/market/9.jpg
     ;;
-    06|07|16|17)
+    06|07|16)
     /usr/local/bin/setwallpaper /home/warpwing/code/dynamic-wallpaper/images/market/18.jpg
     ;;
     *)
