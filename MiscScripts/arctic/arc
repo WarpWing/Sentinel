@@ -3,7 +3,7 @@
 
 # Enviromental Variables 
 ASET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 37/22/18/best -x --audio-format "mp3" -o '%(title)s.%(ext)s' " #ASET sets audio option flags
-VSET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 137/136/best --recode-video "mp4" -o '%(title)s.%(ext)s' " #VSET sets video option flags 
+VSET="--no-overwrites --console-title --quiet --no-overwrites --embed-thumbnail --geo-bypass --add-metadata -f 'bestvideo,bestaudio --recode-video "mp4" -o '%(title)s.%(ext)s' " #VSET sets video option flags 
 BSET="--batch-file" # BSET sets Batch Settings for Batch Downloading 
 
 while getopts v:a:h:b: flag
@@ -15,18 +15,22 @@ do
         a|audio) youtube-dl $ASET ${OPTARG} 
            echo [ARC] Operation has ended
            ;;
-        b|batchmedia) $BSET #REMINDER TO REWORK THIS TO DO BM
+        b|batchmedia) ${OPTARG} #Args here is the file path for batch download
            read -p 'Audio or Video?(a/v): ' INPUT
-           read -p 'Filename?(can be relative path or absolute): ' FILEPATH
-           #REMINDER TO WORK ON DIFFERENCE FUNCTION youtube-dl 
-        h|help) echo Arc Help
-           echo Arc or Arctic is a command line tool to download videos from a variety of sources. Accepts all types of links
-           echo Command Line Flags 
-           echo "-h/-help" - Shows this page
-           echo "-a/-audio" - Downloads audio files.
-           echo "-v/video" - Downloads videos with audio. 
-           echo Thank you for using Arc/Arctic by WarpWing to download your media!
+           if [[ $INPUT == 'a' ]]
+            then 
+            youtube-dl $ASET $BSET ${OPTARG} 
+           elif [[ $INPUT == 'v' ]]
+            then 
+            youtube-dl $VSET $BSET ${OPTARG} 
+           else 
+            echo Please type A for Audio or V for Video 
+           fi 
            ;;
+        c|createmediafile) $OPTARG
+          read -p "What is the name of the file you want to create? : " FNAME 
+          touch FNAME
+          echo File created!
     esac
 done 
 
