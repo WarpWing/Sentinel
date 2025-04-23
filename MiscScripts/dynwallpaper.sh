@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Check the hour and set the wallpaper
-EXCAT=$(date)
-HOUR=$(date +%H)
 while true; do 
+    EXCAT=$(date)
+    HOUR=$(date +%H)
     case "$HOUR" in
     08|09|10|11|12|13|14|15)
     /usr/local/bin/setwallpaper /home/warpwing/code/dynamic-wallpaper/images/market/9.jpg
